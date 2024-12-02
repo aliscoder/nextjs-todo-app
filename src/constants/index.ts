@@ -1,0 +1,1 @@
+export const API_FETCH_LIMIT = 5
