@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db": "npx prisma migrate dev --name init",
-    "seed": "npx ts-node script/seed.ts"
+    "db:generate": "npx prisma migrate dev --name init",
+    "db:seed": "npx ts-node script/seed.ts"
   },
   "dependencies": {
     "@emotion/cache": "latest",

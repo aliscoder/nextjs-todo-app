@@ -1,14 +1,11 @@
 import { Skeleton, Stack } from "@mui/material";
+import React from "react";
 
-const TodoLoading = () => {
+const TodoSkeleton = () => {
   return (
-    <Stack sx={{ width: "100%" }} spacing={1}>
-      <Stack direction='row' alignItems='center' spacing={1}>
-        <Skeleton variant="rounded" height={50} animation="wave" />
-        <Skeleton variant="rounded" height={50} animation="wave" />
-      </Stack>
+    <Stack sx={{width: '100%'}} spacing={1}>
       <Skeleton variant="rounded" height={50} animation="wave" />
-      <Skeleton variant="rounded" height={150} animation="wave" />
+      <Skeleton variant="rounded" height={50} animation="wave" />
       <Skeleton variant="rounded" height={50} animation="wave" />
       <Skeleton variant="rounded" height={50} animation="wave" />
       <Skeleton variant="rounded" height={50} animation="wave" />
@@ -17,4 +14,4 @@ const TodoLoading = () => {
   );
 };
 
-export default TodoLoading;
+export default TodoSkeleton;

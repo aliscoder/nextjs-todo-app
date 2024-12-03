@@ -6,7 +6,7 @@ async function createFakeTodos() {
     await prisma.todo.create({
       data: {
         title: faker.word.noun(),
-        body: faker.lorem.paragraphs(1),
+        body: faker.lorem.sentence(15),
         completed: faker.datatype.boolean()
       },
     });

@@ -1,7 +1,13 @@
 import React from "react";
 import { getTodo, updateTodo } from "@/api";
-import NotFound from "@/components/Error/NotFound";
-import TodoForm from "@/components/TodoForm";
+import NotFound from "@/app/components/common/list-empty";
+import TodoForm from "@/app/components/todo-form";
+import { Metadata } from "next";
+
+export const metadata : Metadata = {
+  title: 'Edit Todo',
+  description: 'You can edit todos here'
+}
 
 const EditTodoPage = async ({ params: { todoId } }: { params: { todoId: string } }) => {
   

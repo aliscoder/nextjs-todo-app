@@ -10,7 +10,7 @@ type Props = {
 
 const DeleteButton = ({id}: Props) => {
   return (
-    <Delete onClick={() => deleteTodo(id)} />
+    <Delete color='error' onClick={() => deleteTodo(id)} />
   )
 }
 

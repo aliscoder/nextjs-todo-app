@@ -1,6 +1,13 @@
 import { createTodo } from "@/api";
-import TodoForm from "@/components/TodoForm";
 import React from "react";
+import TodoForm from "../components/todo-form";
+import { Metadata } from "next";
+
+
+export const metadata : Metadata = {
+  title: 'Add New Todo',
+  description: 'You can add new todos here'
+}
 
 const AddTodoPage = () => {
   

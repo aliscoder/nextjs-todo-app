@@ -26,7 +26,7 @@ const TodoContent = ({ completed, id, title, body }: ITodo) => {
         primary={title}
         secondary={body}
         // 95% is because the listItem doesn't support multiple action button at the end of list
-        secondaryTypographyProps={{ maxWidth: "95%" }}
+        secondaryTypographyProps={{ maxWidth: "90%" }}
       />
     </ListItemButton>
   );

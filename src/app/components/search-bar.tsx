@@ -30,7 +30,7 @@ const SearchBar = () => {
   return (
     <Box display="flex" gap={1}>
       <TextField
-        sx={{ flex: 3 }}
+        sx={{ flex: 4 }}
         size="small"
         onChange={handleChangeFilter}
         type="text"
@@ -44,7 +44,7 @@ const SearchBar = () => {
         onChange={handleChangeFilter}
       >
         {FILTERS.map(({ value, title }) => (
-          <MenuItem value={value}>{title}</MenuItem>
+          <MenuItem key={value} value={value}>{title}</MenuItem>
         ))}
       </Select>
     </Box>

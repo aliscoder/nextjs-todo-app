@@ -1,9 +1,13 @@
-import Loading from "@/components/Loading/Loading";
-import React from "react";
-
+import {  Skeleton, Stack } from "@mui/material";
 
 const TodoLoading = () => {
-  return <Loading />
+  return (
+    <Stack sx={{width: '100%'}} spacing={1}>
+      <Skeleton variant="rounded" height={50} animation="wave" />
+      <Skeleton variant="rounded" height={150} animation="wave" />
+      <Skeleton variant="rounded" height={50} animation="wave" />
+    </Stack>
+  );
 };
 
 export default TodoLoading;

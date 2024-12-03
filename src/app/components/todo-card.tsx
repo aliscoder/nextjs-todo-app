@@ -1,6 +1,6 @@
 import { ITodo } from "@/types";
 import { Edit } from "@mui/icons-material";
-import { Box, IconButton, ListItem } from "@mui/material";
+import {  IconButton, ListItem, Stack } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import DeleteButton from "./delete-button";
@@ -12,7 +12,7 @@ type Props = {
 
 const ActionSection = ({ todoId }: { todoId: number }) => {
   return (
-    <Box>
+    <Stack spacing={1} direction='row'>
       <Link href={`edit/${todoId}`}>
         <IconButton edge="end" aria-label="edit">
           <Edit />
@@ -21,7 +21,7 @@ const ActionSection = ({ todoId }: { todoId: number }) => {
       <IconButton edge="end" aria-label="delete">
         <DeleteButton id={todoId} />
       </IconButton>
-    </Box>
+    </Stack>
   );
 };
 
