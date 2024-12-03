@@ -1,8 +1,7 @@
-import React from "react";
-import { CircularProgress } from "@mui/material";
+import PageLoading from "@/components/PageLoading";
 
 const Loading = () => {
-  return <CircularProgress />
+  return <PageLoading />
 };
 
 export default Loading;

@@ -19,4 +19,11 @@ export type IServerAction = (
       };
     }
   | undefined
->
+>;
+
+export interface IFilter {
+  title: string;
+  value: string;
+}
+
+export type SearchParams = { [key: string]: string | string[] | undefined };

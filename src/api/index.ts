@@ -6,10 +6,8 @@ import { modifiedErrors } from "./utils";
 import { API_FETCH_LIMIT } from "@/constants";
 import { numericParam } from "@/utils/numericParam";
 import { revalidatePath } from "next/cache";
-import { requestToBodyStream } from "next/dist/server/body-streams";
 import { redirect } from "next/navigation";
 
-// get all todos based on search term and filters
 export async function getTodos(params: {
   [key: string]: string | string[] | undefined;
 }) {
@@ -42,7 +40,8 @@ export async function getTodos(params: {
   };
 }
 
-// get especific todo
+
+
 export async function getTodo(todoId: number) {
   const todo = await prisma.todo.findFirst({
     where: { id: todoId },
@@ -53,18 +52,21 @@ export async function getTodo(todoId: number) {
 }
 
 
-// get especific todo
+
+
 export async function deleteTodo(todoId: number) {
   const todo = await prisma.todo.delete({
     where: { id: todoId },
   });
 
   if (!todo) throw new Error("todo not found");
+  
   revalidatePath("/");
   return { todo };
 }
 
-// get especific todo
+
+
 export async function completeTodo(todoId: number) {
   const todo = await prisma.todo.findFirst({ where: { id: todoId } });
 
@@ -80,7 +82,8 @@ export async function completeTodo(todoId: number) {
   revalidatePath("/");
 }
 
-// create todo
+
+
 export async function createTodo(prevState: any, data: FormData) {
   const validatedFields = todoFormSchema.safeParse({
     title: data.get("title"),
@@ -104,7 +107,8 @@ export async function createTodo(prevState: any, data: FormData) {
   redirect('/')
 }
 
-// update todo
+
+
 export async function updateTodo(prevState: any, data: FormData) {
   const validatedFields = todoFormSchema.safeParse({
     title: data.get("title"),

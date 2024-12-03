@@ -5,7 +5,7 @@ import TodoForm from "@/components/TodoForm";
 
 const EditTodoPage = async ({ params: { todoId } }: { params: { todoId: string } }) => {
   
-  const { todo } = await getTodo(Number(todoId));
+  const { todo } = await getTodo(+todoId);
 
   if (!todo) return <NotFound />;
 

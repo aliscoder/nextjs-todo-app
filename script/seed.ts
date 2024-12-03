@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker/locale/en";
 import prisma from "../prisma/prisma";
 
 async function createFakeTodos() {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 50; i++) {
     await prisma.todo.create({
       data: {
         title: faker.word.noun(),

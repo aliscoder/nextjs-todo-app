@@ -1,15 +1,8 @@
 "use client";
 
-import CommonError from "@/components/Error/CommonError";
+import PageError from "./components/common/page-error";
 
 
-
-export default function ChannelsError({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
-  return <CommonError onReset={reset} />;
+export default function TodosError({ reset }: { reset: () => void }) {
+  return <PageError onReset={reset} />;
 }
